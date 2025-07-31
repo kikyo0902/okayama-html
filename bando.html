@@ -185,27 +185,41 @@
   </div>
 
   <script src="travle.js"></script>
-  <script>
-    const langSelect = document.getElementById("langSelect");
-    langSelect.addEventListener("change", function () {
-      const lang = this.value;
-      // Tất cả phần tử có thuộc tính data-ja (cũng có data-en, data-vi)
-      const translatable = document.querySelectorAll("[data-ja]");
-      translatable.forEach(el => {
-        // Thay đổi textContent
-        const text = el.getAttribute(`data-${lang}`);
-        if (text) {
-          el.textContent = text;
-        }
-        // Nếu là input, thay đổi placeholder
-        if (el.placeholder !== undefined) {
-          const placeholder = el.getAttribute(`data-${lang}-placeholder`);
-          if (placeholder) el.placeholder = placeholder;
-        }
-      });
+<script>
+  const langSelect = document.getElementById("langSelect");
+
+  // Hàm cập nhật ngôn ngữ
+  function updateLanguage(lang) {
+    const translatable = document.querySelectorAll("[data-ja]");
+    translatable.forEach(el => {
+      const text = el.getAttribute(`data-${lang}`);
+      if (text) el.textContent = text;
+      if (el.placeholder !== undefined) {
+        const placeholder = el.getAttribute(`data-${lang}-placeholder`);
+        if (placeholder) el.placeholder = placeholder;
+      }
     });
-  </script>
+  }
+
+  // Sự kiện khi chọn ngôn ngữ
+  langSelect.addEventListener("change", function () {
+    const lang = this.value;
+    localStorage.setItem("selectedLanguage", lang); // lưu vào localStorage
+    updateLanguage(lang);
+  });
+
+  // Khi trang load: đọc từ localStorage nếu có
+  window.addEventListener("DOMContentLoaded", () => {
+    const savedLang = localStorage.getItem("selectedLanguage") || "ja"; // mặc định là 'ja'
+    langSelect.value = savedLang;
+    updateLanguage(savedLang);
+  });
+</script>
+
 </body>
+
+</html>
+
 
 </html>
 
