@@ -39,8 +39,9 @@ header {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.20);
+  background: rgba(0, 0, 0, 0.3); /* tăng đậm hơn chút */
   z-index: 1;
+  transition: background 0.4s ease;
 }
 
 .top-bar {
@@ -59,6 +60,11 @@ header {
   align-items: center;
   gap: 15px;
   cursor: pointer;
+  transition: filter 0.3s ease;
+}
+
+.logo-group:hover {
+  filter: brightness(1.1);
 }
 
 .logo-svg {
@@ -87,7 +93,8 @@ header {
   font-size: 1.2em;
   font-weight: bold;
   position: relative;
-  transition: color 0.3s;
+  transition: color 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
 }
 
 .main-menu a::after {
@@ -105,6 +112,7 @@ header {
 
 .main-menu a:hover {
   color: #ff9800;
+  transform: translateY(-2px);
 }
 
 .main-menu a:hover::after {
@@ -115,8 +123,8 @@ header {
   padding: 6px 12px;
   font-size: 1em;
   border-radius: 5px;
-  border: none;
-  background-color: rgba(255,255,255,0.85);
+  border: 1px solid #ddd;
+  background-color: rgba(255,255,255,0.95);
   cursor: pointer;
 }
 
@@ -146,6 +154,11 @@ header {
   text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
   z-index: 10;
   max-width: 400px;
+
+  /* hiệu ứng fade chữ lên khi trang load */
+  opacity: 0;
+  animation: fadeInUp 0.8s ease forwards;
+  animation-delay: 0.4s;
 }
 
 .header-content.left-align h1 {
@@ -177,6 +190,7 @@ header {
   font-weight: 600;
   text-shadow: 1px 1px 5px rgba(0,0,0,0.7);
   width: fit-content;
+  transition: color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
 }
 
 .book-row svg {
@@ -195,8 +209,10 @@ header {
 .book-row:hover {
   color: #ff5722;
   text-shadow: 2px 2px 8px rgba(255,87,34,0.8);
+  box-shadow: 0 4px 12px rgba(255, 87, 34, 0.4);
 }
 
+/* --- HEADER MENU --- */
 #header {
   background-color: #1d1a1a;
   color: white;
@@ -228,7 +244,8 @@ header {
   text-decoration: none;
   font-weight: 500;
   position: relative;
-  transition: color 0.3s ease;
+  transition: color 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
 }
 
 #menu .item a::after {
@@ -246,6 +263,7 @@ header {
 
 #menu .item a:hover {
   color: #ff5722;
+  transform: translateY(-2px);
 }
 
 #menu .item a:hover::after {
@@ -259,6 +277,10 @@ header {
 
 #actions .item {
   color: white;
+}
+
+#actions .item img {
+  cursor: pointer;
 }
 
 /* --- BANNER --- */
@@ -299,6 +321,7 @@ header {
   font-weight: bold;
   border: none;
   transition: 0.3s ease;
+  cursor: pointer;
 }
 
 #banner .box-left button:hover {
@@ -442,6 +465,14 @@ header {
   border-radius: 5px;
   background: rgba(255,255,255,0.1);
   color: white;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+  cursor: text;
+}
+
+#footer form input:focus {
+  outline: none;
+  border: 1.5px solid #ff5722;
+  box-shadow: 0 0 6px rgba(255, 87, 34, 0.7);
 }
 
 #footer form button {
@@ -451,39 +482,112 @@ header {
   color: white;
   border: none;
   border-radius: 5px;
+  cursor: pointer;
 }
 
-@media screen and (max-width: 768px) {
-  .top-bar, .main-menu, .lang-switch, .book-row {
+/* ========== Responsive (Dưới 768px là mobile) ========== */
+@media (max-width: 768px) {
+  .top-bar {
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .main-menu {
+    flex-direction: column;
+    width: 100%;
   }
 
   .main-menu a {
-    font-size: 1em;
+    padding: 10px 0;
+    display: block;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   }
 
-  .header-content.left-align {
-    position: static;
-    padding: 30px 20px;
+  .lang-switch {
+    width: 100%;
+  }
+
+  .header-content {
     text-align: center;
+    padding: 20px;
   }
 
-  .header-content.left-align h1 {
-    font-size: 2.5em;
+  #banner {
+    flex-direction: column;
+    padding: 20px;
   }
 
-  .header-content.left-align h2 {
-    font-size: 1.8em;
+  .box-left, .box-right {
+    width: 100%;
   }
 
-  .header-content.left-align p {
-    font-size: 1.2em;
+  .box-right img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+
+  #wp-products ul {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  #wp-products li.item {
+    width: 100%;
+  }
+
+  #map {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  #map .box-left, #map .box-right {
+    width: 100%;
+  }
+
+  iframe {
+    width: 100% !important;
+    height: auto;
   }
 
   #footer {
     flex-direction: column;
-    align-items: center;
+    gap: 20px;
+    padding: 20px;
+  }
+
+  #footer .box {
+    width: 100%;
+    text-align: center;
+  }
+
+  #menu {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  #actions {
+    justify-content: center;
+  }
+
+  .item img {
+    width: 40px;
+    height: auto;
+  }
+}
+
+/* Animation cho chữ header */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
