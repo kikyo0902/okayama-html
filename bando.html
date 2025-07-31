@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Okayama Travel</title>
+  <title data-ja="岡山観光" data-en="Okayama Travel" data-vi="Du lịch Okayama">岡山観光</title>
   <link rel="stylesheet" href="1255.css" />
 </head>
 
@@ -12,36 +12,37 @@
   <header>
     <video id="bg-video" autoplay muted loop playsinline>
       <source src="./0715(1).mp4" type="video/mp4" />
-      お使いのブラウザは動画を再生できません。
+      <span data-ja="お使いのブラウザは動画を再生できません。"
+            data-en="Your browser does not support the video tag."
+            data-vi="Trình duyệt của bạn không hỗ trợ video.">
+        お使いのブラウザは動画を再生できません。
+      </span>
     </video>
     <div class="overlay"></div>
 
     <div id="user-panel">
-      <h3>ユーザーメニュー</h3>
+      <h3 data-ja="ユーザーメニュー" data-en="User Menu" data-vi="Menu người dùng">ユーザーメニュー</h3>
       <ul>
-        <li><a href="#" style="color: white;">マイページ</a></li>
-        <li><a href="#" style="color: white;">設定</a></li>
-        <li><a href="#" style="color: white;">ログアウト</a></li>
+        <li><a href="#" style="color: white;" data-ja="マイページ" data-en="My Page" data-vi="Trang cá nhân">マイページ</a></li>
+        <li><a href="#" style="color: white;" data-ja="設定" data-en="Settings" data-vi="Cài đặt">設定</a></li>
+        <li><a href="#" style="color: white;" data-ja="ログアウト" data-en="Logout" data-vi="Đăng xuất">ログアウト</a></li>
       </ul>
     </div>
 
     <div class="top-bar">
       <div class="logo-group" id="logo-click">
-        <svg class="logo-svg" viewBox="0 0 320 70" xmlns="http://www.w3.org/2000/svg" role="img"
-          aria-labelledby="logoTitle">
+        <svg class="logo-svg" viewBox="0 0 320 70" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="logoTitle">
           <title id="logoTitle">Sondoong Logo</title>
           <polyline points="10,45 55,10 75,35 75,50" fill="none" stroke="white" stroke-width="4"
             stroke-linecap="round" stroke-linejoin="round" class="mountain-line" />
           <text x="105" y="48" font-family="Verdana, sans-serif" font-size="34" fill="white" font-weight="bold"
-            letter-spacing="3" class="logo-text">
-            岡山
-          </text>
+            letter-spacing="3" class="logo-text" data-ja="岡山" data-en="Okayama" data-vi="Okayama">岡山</text>
         </svg>
       </div>
 
       <nav class="main-menu">
-        <a href="sondongla.html">岡山とは</a>
-        <a href="news.html">ニュース</a>
+        <a href="sondongla.html" data-ja="岡山とは" data-en="About Okayama" data-vi="Okayama là">岡山とは</a>
+        <a href="news.html" data-ja="ニュース" data-en="News" data-vi="Tin tức">ニュース</a>
       </nav>
 
       <div class="lang-switch">
@@ -54,15 +55,20 @@
     </div>
 
     <div class="header-content left-align">
-      <h1>岡山</h1>
-      <h2>へようこそ</h2>
-      <p>美しい海の街</p>
-      <a href="mailto:info@sondoongtour.vn?subject=ツアーの予約" class="book-row" aria-label="ツアーの予約はこちら">
+      <h1 data-ja="岡山" data-en="Okayama" data-vi="Okayama">岡山</h1>
+      <h2 data-ja="へようこそ" data-en="Welcome" data-vi="Chào mừng">へようこそ</h2>
+      <p data-ja="美しい海の街で、あなたの冒険が始まります"
+         data-en="A beautiful coastal city where your adventure begins"
+         data-vi="Thành phố biển xinh đẹp, nơi cuộc phiêu lưu bắt đầu">
+        美しい海の街で、あなたの冒険が始まります
+      </p>
+      <a href="mailto:info@sondoongtour.vn?subject=ツアーの予約" class="book-row" aria-label="ツアーの予約はこちら" 
+         data-ja="ツアーを予約はこちら" data-en="Book your tour here" data-vi="Đặt tour tại đây">
         <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
           <circle cx="32" cy="32" r="30" stroke="white" stroke-width="3" fill="none" />
           <polygon points="26,20 46,32 26,44" fill="white" />
         </svg>
-        予約はこちら
+        ツアーを予約はこちら
       </a>
     </div>
   </header>
@@ -70,20 +76,20 @@
   <div id="wrapper">
     <div id="header">
       <a href="#" class="logo">
-        <img src="./桃のアイコン素材  3 (1).png" alt="Logo Okayama" />
+        <img src="./桃のアイコン素材  3 (1).png" alt="Okayama ロゴ" />
       </a>
       <div id="menu">
-        <div class="item"><a href="">Home</a></div>
-        <div class="item"><a href="">Địa điểm</a></div>
-        <div class="item"><a href="">Blog</a></div>
-        <div class="item"><a href="">Liên hệ</a></div>
+        <div class="item"><a href="" data-ja="ホーム" data-en="Home" data-vi="Trang chủ">ホーム</a></div>
+        <div class="item"><a href="" data-ja="観光地" data-en="Places" data-vi="Địa điểm">観光地</a></div>
+        <div class="item"><a href="" data-ja="ブログ" data-en="Blog" data-vi="Blog">ブログ</a></div>
+        <div class="item"><a href="" data-ja="お問い合わせ" data-en="Contact" data-vi="Liên hệ">お問い合わせ</a></div>
       </div>
       <div id="actions">
         <div class="item">
-          <img src="./桃太郎のアイコン素材.png" alt="Momotaro Icon" />
+          <img src="./桃太郎のアイコン素材.png" alt="桃太郎アイコン" />
         </div>
         <div class="item">
-          <img src="./キャリーバッグ1.png" alt="Vali Icon" />
+          <img src="./キャリーバッグ1.png" alt="スーツケースアイコン" />
         </div>
       </div>
     </div>
@@ -91,40 +97,42 @@
     <div id="banner">
       <div class="box-left">
         <h2>
-          <span>Okayama</span><br />
-          <span>Travel</span>
+          <span data-ja="Okayama" data-en="Okayama" data-vi="Okayama">Okayama</span><br />
+          <span data-ja="旅行" data-en="Travel" data-vi="Du lịch">旅行</span>
         </h2>
-        <p>Khám phá nét cổ kính ở Kurashiki. Kurashiki, Okayama, là viên ngọc cổ kính của Nhật Bản. Nổi bật với khu
-          phố Bikan thời Edo, nơi những con kênh uốn lượn, nhà kho tường trắng và hàng liễu rủ tạo nên khung cảnh thơ
-          mộng. Bạn có thể ngồi thuyền kênh, dạo bộ khám phá các cửa hàng thủ công và Bảo tàng Ohara nổi tiếng.</p>
-        <a href="#wp-products" class="book-row">Let's go</a>
+        <p data-ja="倉敷の古風な魅力を探訪しましょう。倉敷（岡山県）は、日本の歴史的な宝石です。江戸時代の美観地区が有名で、曲がりくねった運河、白壁の蔵、しだれ柳が美しい風景を作り出しています。川舟に乗ったり、手工芸店や有名な大原美術館を散策できます。"
+           data-en="Discover the charming old town of Kurashiki. Kurashiki, Okayama, is a historical gem in Japan. Famous for the Edo-period Bikan district, winding canals, white-walled warehouses, and weeping willows create a picturesque scene. You can enjoy canal boat rides, explore craft shops, and visit the renowned Ohara Museum."
+           data-vi="Khám phá nét cổ kính ở Kurashiki. Kurashiki, Okayama, là viên ngọc lịch sử của Nhật Bản. Nổi bật với khu phố Bikan thời Edo, kênh đào uốn lượn, nhà kho trắng và hàng liễu rủ tạo nên khung cảnh tuyệt đẹp. Bạn có thể đi thuyền trên kênh, tham quan cửa hàng thủ công và Bảo tàng Ohara nổi tiếng.">
+          倉敷の古風な魅力を探訪しましょう。倉敷（岡山県）は、日本の歴史的な宝石です。江戸時代の美観地区が有名で、曲がりくねった運河、白壁の蔵、しだれ柳が美しい風景を作り出しています。川舟に乗ったり、手工芸店や有名な大原美術館を散策できます。
+        </p>
+        <a href="#wp-products" class="book-row" data-ja="行ってみよう" data-en="Let's go" data-vi="Đi thôi">行ってみよう</a>
       </div>
       <div class="box-right">
-        <img src="./tantan-wiguna-qeoQAcfhwFA-unsplash.jpg" alt="Kurashiki view" />
-        <img src="./hinhxe.jpg" alt="Xe du lịch" />
-        <img src="./DSC05756.jpg" alt="Cảnh vật Okayama" />
+        <img src="./tantan-wiguna-qeoQAcfhwFA-unsplash.jpg" alt="倉敷の風景" />
+        <img src="./hinhxe.jpg" alt="観光バス" />
+        <img src="./DSC05756.jpg" alt="岡山の景色" />
       </div>
       <div class="to-bottom">
         <a href="#wp-products">
-          <img src="./桜のフリーアイコン.png" alt="Cherry blossom icon" />
+          <img src="./桜のフリーアイコン.png" alt="桜アイコン" />
         </a>
       </div>
     </div>
 
     <div id="wp-products">
-      <h2>Các địa điểm tham quan</h2>
+      <h2 data-ja="観光スポット" data-en="Tourist Spots" data-vi="Các địa điểm tham quan">観光スポット</h2>
       <ul id="list-products">
         <li class="item">
-          <img src="./doan.jpg" alt="Ẩm thực Okayama" />
-          <div class="name">Okayama 食べ物</div>
+          <img src="./doan.jpg" alt="岡山料理" />
+          <div class="name" data-ja="岡山の食べ物" data-en="Okayama Food" data-vi="Ẩm thực Okayama">岡山の食べ物</div>
         </li>
         <li class="item">
-          <img src="./istockphoto-978892616-2048x2048.jpg" alt="Kurashiki" />
-          <div class="name">Kurashiki</div>
+          <img src="./istockphoto-978892616-2048x2048.jpg" alt="倉敷" />
+          <div class="name" data-ja="倉敷" data-en="Kurashiki" data-vi="Kurashiki">倉敷</div>
         </li>
         <li class="item">
-          <img src="./pexels-kenzo-okuma-2559217-13085860.jpg" alt="Ohara Museum" />
-          <div class="name">Ohara museums</div>
+          <img src="./pexels-kenzo-okuma-2559217-13085860.jpg" alt="大原美術館" />
+          <div class="name" data-ja="大原美術館" data-en="Ohara Museum" data-vi="Bảo tàng Ohara">大原美術館</div>
         </li>
       </ul>
     </div>
@@ -132,8 +140,9 @@
     <div id="map">
       <div class="box-left">
         <h1>
-          <span>Địa chỉ:</span>
-          <span>Central, Kurashiki, Okayama 710-0046</span>
+          <span data-ja="住所：" data-en="Address:" data-vi="Địa chỉ:">住所：</span>
+          <span data-ja="岡山県倉敷市中央 710-0046" data-en="Central, Kurashiki, Okayama 710-0046" data-vi="Kurashiki, Okayama 710-0046">岡山県倉敷市中央 710-0046</span><br />
+          <span data-ja="電話番号：" data-en="Phone:" data-vi="Điện thoại:">電話番号：</span>
           <span>0864210224</span>
         </h1>
       </div>
@@ -148,41 +157,55 @@
     <div id="footer">
       <div class="box">
         <div class="logo">
-          <img src="./桃のアイコン素材  3 (1).png" alt="Logo footer" />
+          <img src="./桃のアイコン素材  3 (1).png" alt="フッターロゴ" />
         </div>
-        <p>Cung cấp dịch vụ với chất lượng tốt nhất cho khách tham quan</p>
+        <p data-ja="観光客に最高のサービスを提供します。"
+           data-en="Providing the best service for tourists."
+           data-vi="Cung cấp dịch vụ tốt nhất cho khách du lịch.">
+          観光客に最高のサービスを提供します。
+        </p>
       </div>
       <div class="box">
-        <h3>Nội dung</h3>
+        <h3 data-ja="コンテンツ" data-en="Contents" data-vi="Nội dung">コンテンツ</h3>
         <ul class="quick-menu">
-          <li class="item"><a href="">Home</a></li>
-          <li class="item"><a href="">Địa điểm</a></li>
-          <li class="item"><a href="">Blog</a></li>
-          <li class="item"><a href="">Liên hệ</a></li>
+          <li class="item"><a href="" data-ja="ホーム" data-en="Home" data-vi="Trang chủ">ホーム</a></li>
+          <li class="item"><a href="" data-ja="観光地" data-en="Places" data-vi="Địa điểm">観光地</a></li>
+          <li class="item"><a href="" data-ja="ブログ" data-en="Blog" data-vi="Blog">ブログ</a></li>
+          <li class="item"><a href="" data-ja="お問い合わせ" data-en="Contact" data-vi="Liên hệ">お問い合わせ</a></li>
         </ul>
       </div>
       <div class="box">
-        <h3>Liên hệ</h3>
+        <h3 data-ja="お問い合わせ" data-en="Contact" data-vi="Liên hệ">お問い合わせ</h3>
         <form action="">
-          <input type="text" placeholder="Địa chỉ Email" />
-          <button>Nhận tin</button>
+          <input type="text" placeholder="メールアドレス" data-ja-placeholder="メールアドレス" data-en-placeholder="Email Address" data-vi-placeholder="Địa chỉ Email" />
+          <button data-ja="登録" data-en="Subscribe" data-vi="Nhận tin">登録</button>
         </form>
       </div>
     </div>
   </div>
 
   <script src="travle.js"></script>
-
   <script>
     const langSelect = document.getElementById("langSelect");
     langSelect.addEventListener("change", function () {
       const lang = this.value;
-      const translatable = document.querySelectorAll("[data-vi]");
+      // Tất cả phần tử có thuộc tính data-ja (cũng có data-en, data-vi)
+      const translatable = document.querySelectorAll("[data-ja]");
       translatable.forEach(el => {
-        el.textContent = el.getAttribute("data-" + lang);
+        // Thay đổi textContent
+        const text = el.getAttribute(`data-${lang}`);
+        if (text) {
+          el.textContent = text;
+        }
+        // Nếu là input, thay đổi placeholder
+        if (el.placeholder !== undefined) {
+          const placeholder = el.getAttribute(`data-${lang}-placeholder`);
+          if (placeholder) el.placeholder = placeholder;
+        }
       });
     });
   </script>
 </body>
 
 </html>
+
